@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import QuestForm from "./components/QuestForm";
-import Test from "./components/Test";
-import QuizIcon from "../src/Assets/logo 1.png";
 import ProgramTable from "./components/ProgramTable";
 
 const App = () => {
