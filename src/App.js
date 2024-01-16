@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import QuestForm from "./components/QuestForm";
+import Test from "./components/Test";
+import QuizIcon from "../src/Assets/logo 1.png";
+import ProgramTable from "./components/ProgramTable";
 
-function App() {
+const App = () => {
+  const [programData, setProgramData] = useState(null);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="navbar">Medversity</div>
+      {programData === null ? (
+        <QuestForm setProgramData={setProgramData} />
+      ) : (
+        <ProgramTable programData={programData} />
+      )}
+      {/* <Test /> */}
     </div>
   );
-}
+};
 
 export default App;
